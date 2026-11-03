@@ -1,0 +1,7 @@
+DATABASE_URL="postgresql://neondb_owner:npg_Xe3mhgTxlu4o@ep-soft-art-b4madygn-pooler.c-6.us-east-2.aws.neon.tech/nest-app-database?sslmode=require&channel_binding=require"
+DIRECT_URL="postgresql://neondb_owner:npg_Xe3mhgTxlu4o@ep-soft-art-b4madygn-pooler.c-6.us-east-2.aws.neon.tech/nest-app-database?sslmode=require&channel_binding=require"
+
+
+# JWT
+JWT_SECRET=your_jwt_secret_key
+JWT_EXPIRES_IN=1d # Token expiration time ( 1 day, 1h, 30m, etc.)
