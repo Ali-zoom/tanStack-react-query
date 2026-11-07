@@ -13,7 +13,8 @@ const AddUserForm = () => {
         const addUser=useAddUser() //call the custom hook to add user
         const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
-        console.log(name,email,password)
+               //call the mutate function to add user
+
      addUser.mutate({name,email,password},{onSuccess:()=>{
             setName("")
             setEmail("")
@@ -22,7 +23,6 @@ const AddUserForm = () => {
     
     
     }
-       //call the mutate function to add user
   return (
    <div>
         <h1>Add User Page</h1>
