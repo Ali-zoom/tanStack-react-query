@@ -72,7 +72,7 @@ const useAddUser = (): UseMutationResult<DataResponse, AxiosError,DataBody> => {
             rollback();
         }
     },
-    onSuccess: () => {
+    onSuccess: (data) => {
         console.log("user added successfully")
         //update the cache for the "all-users" query to include the new user
         queryClient.invalidateQueries({ queryKey: ["all-users"],exact: false });
