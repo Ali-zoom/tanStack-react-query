@@ -15,16 +15,12 @@ interface DataResponseType {
   message: string;
 }
 
-const logoutUser = async (data: DataBody): Promise<DataResponseType> => {
+const logoutUser = async (): Promise<DataResponseType> => {
   const result = await api.post<DataResponseType>(`/users/auth/logout`);
   return result.data;
 };
 
-const useLogout = (): UseMutationResult<
-  DataResponseType,
-  AxiosError,
-  DataBody
-> => {
+const useLogout = ()  => {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: logoutUser,
