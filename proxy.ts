@@ -6,7 +6,7 @@ const secret = new TextEncoder().encode(process.env.JWT_SECRET);
 
 const roleRoutes: Record<string, string[]> = {
   '/admin': ['ADMIN'],
-  '/dashboard': ['ADMIN', 'USER'],
+  // '/dashboard': ['ADMIN', 'USER'],
   '/profile': ['ADMIN', 'USER'],
 };
 
@@ -39,4 +39,5 @@ export async function proxy(req: NextRequest) {
   return NextResponse.next();
 }
 
-export const config = { matcher: ['/admin/:path*', '/dashboard/:path*', '/profile/:path*'] };
+// export const config = { matcher: ['/admin/:path*', '/dashboard/:path*', '/profile/:path*'] };
+export const config = { matcher: ['/admin/:path*', '/profile/:path*'] };

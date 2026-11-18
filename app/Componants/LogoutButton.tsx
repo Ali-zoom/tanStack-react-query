@@ -10,8 +10,8 @@ export function LogoutButton() {
       onClick={() =>
         logout.mutate(undefined, {
           onSuccess: () => {
-            router.replace('/login');
-            router.refresh();
+            // router.replace('/login');
+             router.refresh();
           },
         })
       }
